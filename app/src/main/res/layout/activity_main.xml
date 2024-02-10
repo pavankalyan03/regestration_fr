@@ -8,7 +8,8 @@
     <androidx.fragment.app.FragmentContainerView
             android:layout_width="match_parent"
             android:layout_height="600dp"
-            android:id="@+id/topfrag"/>
+            android:id="@+id/topfrag"
+            android:name="com.example.regestration_fr.Homescreen"/>
 
     <androidx.fragment.app.FragmentContainerView
             android:layout_width="match_parent"

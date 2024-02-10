@@ -20,4 +20,11 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
 
     }
+
+    public void replacebottomfrag(Fragment frg){
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.bottomfrag, frg)
+                .commit();
+
+    }
 }

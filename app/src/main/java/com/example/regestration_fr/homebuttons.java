@@ -9,11 +9,6 @@ import android.view.ViewGroup;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link homebuttons#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class homebuttons extends Fragment {
 
     private Button login,register;

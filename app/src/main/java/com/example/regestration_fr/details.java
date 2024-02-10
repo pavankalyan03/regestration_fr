@@ -5,6 +5,8 @@ import android.app.DatePickerDialog;
 import android.os.Bundle;
 
 import android.widget.*;
+
+import androidx.appcompat.widget.ThemedSpinnerAdapter;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -20,6 +22,7 @@ public class details extends Fragment {
     RadioGroup rg;
     RadioButton male,female;
     String sex, date;
+    String fs,ls,gen,db,adr;
     DatePicker dp;
 
     @Override
@@ -32,8 +35,10 @@ public class details extends Fragment {
         male = view.findViewById(R.id.radioButton);
         female = view.findViewById(R.id.radioButton2);
         register = view.findViewById(R.id.button3);
-        fix = view.findViewById(R.id.button4);
         dob = view.findViewById(R.id.date);
+        first = view.findViewById(R.id.editTextText);
+        last = view.findViewById(R.id.editTextText2);
+        address = view.findViewById(R.id.editTextText3);
 
         rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -58,7 +63,20 @@ public class details extends Fragment {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), date , Toast.LENGTH_SHORT).show();
+                String firstname = first.getText().toString();
+                String lastname = last.getText().toString();
+                String gender = sex;
+                String dob = date;
+                String addr = address.getText().toString();
+
+                regestration help = new regestration();
+                help.setFirstname(firstname);
+                help.setLastname(lastname);
+                help.setGen(gender);
+                help.setDb(dob);
+                help.setAdr(addr);
+
+                ((MainActivity) requireActivity()).replacetopfrag(new regestration());
 
             }
         });
@@ -90,4 +108,5 @@ public class details extends Fragment {
         // Show the DatePickerDialog
         datePickerDialog.show();
     }
+
 }

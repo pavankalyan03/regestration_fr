@@ -91,17 +91,6 @@
                 android:layout_marginTop="24dp"
                 android:id="@+id/date"/>
 
-        <Button
-                android:text="Fix"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button4"
-                android:layout_marginTop="25dp"
-                android:layout_below="@id/group"
-                android:layout_toEndOf="@+id/date"
-                android:layout_marginStart="40dp"/>
-
-
 
     </RelativeLayout>
 
