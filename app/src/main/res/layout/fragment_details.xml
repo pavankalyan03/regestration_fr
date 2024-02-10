@@ -58,35 +58,49 @@
                 android:text="Female" />
         </RadioGroup>
 
-        <DatePicker
-            android:id="@+id/date"
-            android:layout_width="250dp"
-            android:layout_height="198dp"
-            android:layout_below="@id/group"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="304dp"
-            android:calendarViewShown="false"
-            android:datePickerMode="spinner" />
-
         <EditText
             android:id="@+id/editTextText3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="20"
             android:inputType="text"
-            android:layout_below="@id/group"
-            android:layout_marginTop="280dp"
+            android:layout_below="@id/date"
+            android:layout_marginTop="40dp"
             android:hint="Address" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editTextText3"
-            android:layout_marginTop="30dp"
-            android:layout_centerHorizontal="true"
-            android:text="Register" />
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextText3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="140dp"
+                android:text="Register"
+                />
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:hint="Select Date of Birth"
+                android:clickable="true"
+                android:focusable="false"
+                android:ems="10"
+                android:focusableInTouchMode="false"
+                android:layout_below="@id/group"
+                android:layout_marginTop="24dp"
+                android:id="@+id/date"/>
+
+        <Button
+                android:text="Fix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button4"
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/group"
+                android:layout_toEndOf="@+id/date"
+                android:layout_marginStart="40dp"/>
+
 
 
     </RelativeLayout>
