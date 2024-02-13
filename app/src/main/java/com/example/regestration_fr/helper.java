@@ -1,45 +1,50 @@
 package com.example.regestration_fr;
 
-public class helper {
-    private String firstname,lastname,gender,date,address;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+public class helper extends ViewModel {
+    private final MutableLiveData<String> f = new MutableLiveData<>();
+    private final MutableLiveData<String> l= new MutableLiveData<>();
+    private final MutableLiveData<String> g= new MutableLiveData<>();
+    private final MutableLiveData<String> d = new MutableLiveData<>();
+    private final MutableLiveData<String> a = new MutableLiveData<>();
+
+    public void setFname(String fname) {
+        f.setValue(fname);
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public LiveData<String> getFname() {
+        return f;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setLname(String lname) {
+        l.setValue(lname);
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public LiveData<String> getLname() {
+        return l;
+    }
+    public void setGen(String gen) {
+        g.setValue(gen);
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public LiveData<String> getGen() {
+        return g;
+    }
+    public void setDob(String dob) {
+        d.setValue(dob);
     }
 
-    public String getFirstname() {
-        return firstname;
+    public LiveData<String> getDob() {
+        return d;
+    }
+    public void setAddr(String addr) {
+        a.setValue(addr);
     }
 
-    public String getLastname() {
-        return lastname;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public String getAddress() {
-        return address;
+    public LiveData<String> getAddr() {
+        return a;
     }
 }

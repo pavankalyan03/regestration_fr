@@ -10,47 +10,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 
 public class regestration extends Fragment {
     EditText first,last,gender,dob,address;
-    String firstname,lastname,gen,db,adr;
     Button logout;
-
-    public regestration() {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.gen = gen;
-        this.db = db;
-        this.adr = adr;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public void setGen(String gen) {
-        this.gen = gen;
-    }
-
-    public void setDb(String db) {
-        this.db = db;
-    }
-
-    public void setAdr(String adr) {
-        this.adr = adr;
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_regestration, container, false);
+        helper shared = new ViewModelProvider(requireActivity()).get(helper.class);
 
 
         first = view.findViewById(R.id.editTextText4);
@@ -58,15 +32,44 @@ public class regestration extends Fragment {
         gender = view.findViewById(R.id.editTextText7);
         dob = view.findViewById(R.id.editTextText8);
         address = view.findViewById(R.id.editTextText9);
-
-
-        first.setText("Your first name is: " + firstname);
-        last.setText("Your Last Name is " + lastname);
-        gender.setText("Your Gender is " + gen);
-        dob.setText("Your Date of Birth" +db);
-        address.setText("Your address is" + adr);
-
         logout = view.findViewById(R.id.logout);
+
+        shared.getFname().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                first.setText("Your first name is: " + s);
+            }
+        });
+
+        shared.getLname().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                last.setText("Your Last Name is: " + s);;
+            }
+        });
+
+        shared.getGen().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                gender.setText("Your Gender is: " + s);
+            }
+        });
+
+        shared.getDob().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                dob.setText("Your Date of Birth: " + s);
+            }
+        });
+
+        shared.getAddr().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                address.setText("Your address is: " + s);
+            }
+        });
+
+
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

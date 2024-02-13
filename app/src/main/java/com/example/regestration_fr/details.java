@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.lifecycle.ViewModelProvider;
 
 import java.util.Calendar;
 
@@ -30,6 +31,8 @@ public class details extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_details, container, false);
+
+        helper shared = new ViewModelProvider(requireActivity()).get(helper.class);
 
         rg = view.findViewById(R.id.group);
         male = view.findViewById(R.id.radioButton);
@@ -69,12 +72,11 @@ public class details extends Fragment {
                 String dob = date;
                 String addr = address.getText().toString();
 
-                regestration help = new regestration();
-                help.setFirstname(firstname);
-                help.setLastname(lastname);
-                help.setGen(gender);
-                help.setDb(dob);
-                help.setAdr(addr);
+               shared.setFname(firstname);
+               shared.setLname(lastname);
+               shared.setGen(gender);
+               shared.setDob(dob);
+               shared.setAddr(addr);
 
                 ((MainActivity) requireActivity()).replacetopfrag(new regestration());
 
