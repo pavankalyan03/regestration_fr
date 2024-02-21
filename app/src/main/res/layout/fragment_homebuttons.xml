@@ -5,30 +5,28 @@
              android:layout_height="match_parent"
              tools:context=".homebuttons">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="78dp"
+            android:gravity="center"
+        android:background="@color/pk"
             android:orientation="horizontal">
 
         <Button
                 android:text="Login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="60dp"
+                android:layout_marginRight="30dp"
+                android:padding="3dp"
+                android:backgroundTint="@color/black"
                 android:id="@+id/button"/>
         <Button
                 android:text="Register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="60dp"
+                android:layout_marginLeft="30dp"
+                android:padding="3dp"
+                android:backgroundTint="@color/black"
                 android:id="@+id/button2"/>
 
 

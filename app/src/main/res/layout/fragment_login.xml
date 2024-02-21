@@ -1,44 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login">
+    tools:context=".login"
+    android:background="@color/black">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@color/red"
+        android:padding="10dp">
 
 
         <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="200dp"
-                android:ems="10"
-                android:hint="Enter Username"
-                android:id="@+id/editTextText5"/>
+            android:id="@+id/editTextText5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:padding="10dp"
+            android:hint="Enter Username"
+            android:inputType="text" />
+
         <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/editTextText5"
-                android:layout_marginTop="30dp"
-                android:ems="10"
-                android:hint="Enter Password"
-                android:id="@+id/editTextText10"/>
+            android:id="@+id/editTextText10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextText5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:padding="10dp"
+            android:hint="Enter Password"
+            android:inputType="text" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
             android:layout_below="@id/editTextText5"
             android:layout_centerHorizontal="true"
-            android:text="Login"/>
+            android:layout_marginTop="150dp"
+            android:backgroundTint="@color/black"
+            android:text="Login" />
 
     </RelativeLayout>
 
-</FrameLayout>
+</RelativeLayout>

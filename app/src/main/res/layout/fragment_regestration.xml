@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".regestration">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-         />
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        android:background="@color/red"
         android:orientation="vertical">
 
 
@@ -21,6 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:background="@color/white"
+            android:padding="10dp"
             android:inputType="text"
             android:layout_marginTop="20dp"
              />
@@ -30,6 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:background="@color/white"
+            android:padding="10dp"
             android:layout_marginTop="20dp"
             android:inputType="text"
              />
@@ -38,6 +40,8 @@
             android:id="@+id/editTextText7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp"
             android:ems="10"
             android:layout_marginTop="20dp"
             android:inputType="text"
@@ -48,6 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:background="@color/white"
+            android:padding="10dp"
             android:layout_marginTop="20dp"
             android:inputType="text"
              />
@@ -57,6 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:background="@color/white"
+            android:padding="10dp"
             android:layout_marginTop="20dp"
             android:inputType="text"
              />
@@ -65,7 +73,9 @@
             android:id="@+id/logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginLeft="70dp"
+            android:textColor="@color/white"
             android:layout_marginTop="100dp"
             android:text="Logout"
              />
@@ -73,4 +83,4 @@
 
     </LinearLayout>
 
-</FrameLayout>
+</RelativeLayout>
